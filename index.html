@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IBAP-RJ | Soluções integradas para a administração pública</title>
+    <meta name="description" content="O IBAP-RJ é uma sociedade civil sem fins lucrativos, criada em 2002, que atua com pesquisa aplicada, consultoria e assistência técnica para a administração pública.">
+    <link rel="canonical" href="https://ibap-rj.org.br/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="IBAP-RJ">
+    <meta property="og:title" content="IBAP-RJ | Soluções integradas para a administração pública">
+    <meta property="og:description" content="Pesquisa aplicada, consultoria e assistência técnica para a administração pública.">
+    <meta property="og:url" content="https://ibap-rj.org.br/">
+
+    <link rel="icon" href="https://ibap-rj.org.br/wp-content/uploads/2023/09/ibap-rj-icon-32x32-1.png" sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+    <!-- Marca que o JS está ativo antes de o CSS aplicar estados iniciais de animação -->
+    <script>document.documentElement.classList.add('js');</script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ===== Barra de acesso rápido ===== -->
+    <div class="utility-bar">
+        <div class="container utility-bar__inner">
+            <p class="utility-bar__phone">Atendimento: <a href="tel:+552138061000">(21) 3806-1000</a></p>
+            <nav aria-label="Acesso rápido">
+                <ul class="utility-bar__links">
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Transparência</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="http://200.146.211.21/IBAPCC/">Contracheque</a></li>
+                    <li><a href="https://ibap-rj.org.br/ponto-ibap/">Ponto IBAP</a></li>
+                    <li><a href="mailto:denuncias@ibap-rj.org.br">Canal de denúncias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- ===== Cabeçalho ===== -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="#inicio">
+                <img class="brand__logo" src="https://ibap-rj.org.br/wp-content/uploads/2023/09/iba-rj-logo.jpg" alt="IBAP-RJ – página inicial">
+            </a>
+
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+                <span class="menu-toggle__bar" aria-hidden="true"></span>
+                <span class="menu-toggle__bar" aria-hidden="true"></span>
+                <span class="menu-toggle__bar" aria-hidden="true"></span>
+            </button>
+
+            <nav class="main-nav" id="main-nav" aria-label="Principal">
+                <ul class="main-nav__list">
+                    <li><a class="main-nav__link" href="#quem-somos">Quem somos</a></li>
+                    <li><a class="main-nav__link" href="#atuacao">Atuação</a></li>
+                    <li><a class="main-nav__link" href="#projetos">Projetos</a></li>
+                    <li><a class="main-nav__link" href="#boletim">Boletim</a></li>
+                    <li><a class="main-nav__link" href="#parceiros">Clientes e parceiros</a></li>
+                    <li><a class="main-nav__link" href="#contato">Contato</a></li>
+                </ul>
+                <a class="btn btn--primary main-nav__cta" href="https://trabalheconosco.ibap-rj.org.br">Trabalhe conosco</a>
+            </nav>
+        </div>
+    </header>
+    <div class="header-sentinel" data-header-sentinel aria-hidden="true"></div>
+
+    <main id="conteudo">
+
+        <!-- ===== Hero ===== -->
+        <section class="hero" id="inicio" aria-labelledby="hero-titulo">
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <p class="hero__kicker">Instituto Brasileiro de Administração Pública e Apoio Universitário do Rio de Janeiro</p>
+                    <h1 class="hero__title" id="hero-titulo">Soluções integradas para a administração pública</h1>
+                    <p class="hero__lead">Pesquisa aplicada, consultoria e assistência técnica para promover o desenvolvimento sustentável, a governança pública e o aperfeiçoamento institucional das organizações.</p>
+                    <div class="hero__actions">
+                        <a class="btn btn--light" href="#atuacao">Conheça nossos núcleos</a>
+                        <a class="btn btn--ghost" href="#contato">Fale conosco</a>
+                    </div>
+                </div>
+
+                <aside class="hero__featured" aria-labelledby="destaques-titulo">
+                    <h2 class="hero__featured-title" id="destaques-titulo">Em destaque</h2>
+                    <div class="carousel carousel--featured" data-carousel>
+                        <ul class="carousel__track" data-carousel-track>
+                            <li class="featured-slide">
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfg-czgYxuvrlsOlVb9DJxtMsZVi6AdFqEHtvmzy1wqi5g3qg/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+                                    <img src="https://ibap-rj.org.br/wp-content/uploads/2026/07/CursodeDroneSite-1.png" alt="Banner de divulgação do curso de drone do IBAP-RJ" width="1080" height="1080">
+                                    <span class="featured-slide__caption">Curso de drone: inscrições abertas<span class="visually-hidden"> (abre em nova aba)</span></span>
+                                </a>
+                            </li>
+                            <li class="featured-slide">
+                                <a href="https://ibap-rj.org.br/fique-por-dentro/%f0%9f%92%9a-setembro-verde-ibap/">
+                                    <img src="https://ibap-rj.org.br/wp-content/uploads/2026/09/Setembro-Verde-2026.jpeg" alt="Campanha Setembro Verde 2026 do IBAP-RJ" width="1080" height="1080" loading="lazy">
+                                    <span class="featured-slide__caption">Setembro Verde IBAP</span>
+                                </a>
+                            </li>
+                            <li class="featured-slide">
+                                <a href="https://empreendaja.ibap-rj.org.br/">
+                                    <img src="https://ibap-rj.org.br/wp-content/uploads/2026/07/EmpreendajaSite.png" alt="Banner do projeto Empreenda Já" width="1080" height="1080" loading="lazy">
+                                    <span class="featured-slide__caption">Projeto Empreenda Já</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="carousel__controls">
+                            <div class="carousel__dots">
+                                <button type="button" class="carousel__dot" data-carousel-dot aria-label="Ir para o destaque 1"></button>
+                                <button type="button" class="carousel__dot" data-carousel-dot aria-label="Ir para o destaque 2"></button>
+                                <button type="button" class="carousel__dot" data-carousel-dot aria-label="Ir para o destaque 3"></button>
+                            </div>
+                            <div class="carousel__arrows">
+                                <button type="button" class="carousel__btn" data-carousel-prev aria-label="Destaque anterior">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>
+                                </button>
+                                <button type="button" class="carousel__btn" data-carousel-next aria-label="Próximo destaque">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ===== Números ===== -->
+        <section class="stats" aria-label="O IBAP-RJ em números">
+            <div class="container">
+                <ul class="stats__list">
+                    <li class="stats__item">
+                        <strong class="stats__value">2002</strong>
+                        <span class="stats__label">ano de fundação do instituto</span>
+                    </li>
+                    <li class="stats__item">
+                        <strong class="stats__value"><span class="counter" data-target="8">8</span></strong>
+                        <span class="stats__label">núcleos especializados de pesquisa aplicada</span>
+                    </li>
+                    <li class="stats__item">
+                        <strong class="stats__value"><span class="counter" data-target="25">25</span>+</strong>
+                        <span class="stats__label">clientes públicos e privados</span>
+                    </li>
+                    <li class="stats__item">
+                        <strong class="stats__value"><span class="counter" data-target="20">20</span>+</strong>
+                        <span class="stats__label">parcerias institucionais no Brasil e no exterior</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== Quem somos ===== -->
+        <section class="section about" id="quem-somos" aria-labelledby="quem-somos-titulo">
+            <div class="container about__grid">
+                <div class="about__text reveal">
+                    <h2 id="quem-somos-titulo">Quem somos</h2>
+                    <p>O Instituto Brasileiro de Administração Pública e Apoio Universitário do Rio de Janeiro (IBAP-RJ), criado em 2002, é uma sociedade civil, sem fins lucrativos, de caráter educativo, científico e cultural.</p>
+                    <p>Nossa missão é criar, aplicar e compartilhar o conhecimento em gestão de forma a promover o desenvolvimento sustentável, a governança pública e o aperfeiçoamento institucional das organizações.</p>
+                    <div class="about__links">
+                        <a class="btn btn--outline" href="https://ibap-rj.org.br/sobre-o-ibap-rj/quem-somos/">Conheça o instituto</a>
+                        <a class="text-link" href="https://ibap-rj.org.br/historico/">Nosso histórico</a>
+                        <a class="text-link" href="https://ibap-rj.org.br/sobre-o-ibap-rj/organizacao-social/">Organização Social</a>
+                    </div>
+                </div>
+
+                <ul class="pillars reveal">
+                    <li class="pillar">
+                        <h3 class="pillar__title">Consultoria</h3>
+                        <p>Núcleos especializados combinam pesquisa em diferentes áreas com aplicação prática, em projetos de consultoria e assistência técnica conduzidos por especialistas.</p>
+                        <a class="text-link" href="https://ibap-rj.org.br/linhas-de-atuacao/pesquisa-e-consultoria/">Pesquisa e consultoria</a>
+                    </li>
+                    <li class="pillar">
+                        <h3 class="pillar__title">Responsabilidade socioambiental</h3>
+                        <p>Iniciativas de impacto social, científico e tecnológico realizadas por meio de parcerias institucionais nacionais e internacionais.</p>
+                        <a class="text-link" href="https://ibap-rj.org.br/sobre-o-ibap-rj/responsabilidade-socioambiental/">Nossas iniciativas</a>
+                    </li>
+                    <li class="pillar">
+                        <h3 class="pillar__title">Certificações ISO</h3>
+                        <p>Processos certificados com selo ISO, que asseguram transparência e qualidade em nossas operações.</p>
+                        <a class="text-link" href="https://ibap-rj.org.br/sobre-o-ibap-rj/certificacoes/">Ver certificações</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== Linhas de atuação (abas) ===== -->
+        <!-- Os resumos de cada núcleo foram escritos a partir dos nomes e projetos publicados no site atual: revisar com a equipe antes de publicar. -->
+        <section class="section section--surface" id="atuacao" aria-labelledby="atuacao-titulo">
+            <div class="container">
+                <div class="section-head">
+                    <h2 id="atuacao-titulo">Linhas de atuação</h2>
+                    <p>Nossos núcleos reúnem especialistas selecionados pela formação acadêmica e pela experiência em consultoria. Escolha uma área para saber mais.</p>
+                </div>
+
+                <div class="nucleos reveal" data-tabs>
+                    <div class="nucleos__tabs" role="tablist" aria-label="Núcleos especializados">
+                        <button type="button" class="nucleos__tab" role="tab" id="tab-ciac" aria-controls="painel-ciac" aria-selected="true">Centros Integrados de Atendimento ao Cidadão</button>
+                        <button type="button" class="nucleos__tab" role="tab" id="tab-resultados" aria-controls="painel-resultados" aria-selected="false" tabindex="-1">Gestão Integrada para Resultados</button>
+                        <button type="button" class="nucleos__tab" role="tab" id="tab-governanca" aria-controls="painel-governanca" aria-selected="false" tabindex="-1">Desenvolvimento e Governança</button>
+                        <button type="button" class="nucleos__tab" role="tab" id="tab-pessoas" aria-controls="painel-pessoas" aria-selected="false" tabindex="-1">Gestão de Pessoas</button>
+                        <button type="button" class="nucleos__tab" role="tab" id="tab-socioambiental" aria-controls="painel-socioambiental" aria-selected="false" tabindex="-1">Gestão Social e Ambiental</button>
+                        <button type="button" class="nucleos__tab" role="tab" id="tab-tic" aria-controls="painel-tic" aria-selected="false" tabindex="-1">Tecnologia da Informação e da Comunicação</button>
+                        <button type="button" class="nucleos__tab" role="tab" id="tab-seletivos" aria-controls="painel-seletivos" aria-selected="false" tabindex="-1">Processos Seletivos</button>
+                        <button type="button" class="nucleos__tab" role="tab" id="tab-mobilidade" aria-controls="painel-mobilidade" aria-selected="false" tabindex="-1">Mobilidade Urbana</button>
+                    </div>
+
+                    <div class="nucleos__panels">
+                        <article class="nucleo-panel" role="tabpanel" id="painel-ciac" aria-labelledby="tab-ciac" tabindex="0">
+                            <h3 class="nucleo-panel__title">Centros Integrados de Atendimento ao Cidadão</h3>
+                            <p>Planejamento e implantação de centrais que reúnem, em um único espaço, órgãos públicos, entidades da sociedade civil e empresas prestadoras de serviços ao cidadão.</p>
+                            <h4 class="nucleo-panel__subtitle">Projeto relacionado</h4>
+                            <ul class="nucleo-panel__list">
+                                <li><a href="https://ibap-rj.org.br/projetos-em-destaque/central-de-atendimento-ao-cidadao/">Centrais de Atendimento</a></li>
+                            </ul>
+                            <a class="btn btn--outline" href="https://ibap-rj.org.br/linhas-de-atuacao/atendimento-ao-cidadao/">Conhecer o núcleo</a>
+                        </article>
+
+                        <article class="nucleo-panel" role="tabpanel" id="painel-resultados" aria-labelledby="tab-resultados" tabindex="0">
+                            <h3 class="nucleo-panel__title">Gestão Integrada para Resultados</h3>
+                            <p>Apoio a organizações públicas na estruturação de processos, metas e indicadores, para que a gestão acompanhe e entregue resultados à sociedade.</p>
+                            <a class="btn btn--outline" href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-integrada-para-resultados/">Conhecer o núcleo</a>
+                        </article>
+
+                        <article class="nucleo-panel" role="tabpanel" id="painel-governanca" aria-labelledby="tab-governanca" tabindex="0">
+                            <h3 class="nucleo-panel__title">Desenvolvimento e Governança</h3>
+                            <p>Estudos e produção de conhecimento sobre governança pública. O núcleo mantém o Boletim IBAP-RJ, espaço aberto à troca de conteúdos de interesse da administração pública.</p>
+                            <h4 class="nucleo-panel__subtitle">Produção relacionada</h4>
+                            <ul class="nucleo-panel__list">
+                                <li><a href="#boletim">Boletim IBAP-RJ</a></li>
+                            </ul>
+                            <a class="btn btn--outline" href="https://ibap-rj.org.br/linhas-de-atuacao/desenvolvimento-e-governanca/">Conhecer o núcleo</a>
+                        </article>
+
+                        <article class="nucleo-panel" role="tabpanel" id="painel-pessoas" aria-labelledby="tab-pessoas" tabindex="0">
+                            <h3 class="nucleo-panel__title">Gestão de Pessoas</h3>
+                            <p>Projetos de capacitação, desenvolvimento de equipes e aperfeiçoamento da gestão de pessoas em organizações públicas.</p>
+                            <a class="btn btn--outline" href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-de-pessoas/">Conhecer o núcleo</a>
+                        </article>
+
+                        <article class="nucleo-panel" role="tabpanel" id="painel-socioambiental" aria-labelledby="tab-socioambiental" tabindex="0">
+                            <h3 class="nucleo-panel__title">Gestão Social e Ambiental</h3>
+                            <p>Iniciativas de impacto social e ambiental desenvolvidas com instituições públicas, como a qualificação de profissionais e pequenos negócios locais.</p>
+                            <h4 class="nucleo-panel__subtitle">Projeto relacionado</h4>
+                            <ul class="nucleo-panel__list">
+                                <li><a href="https://fenig.novaiguacu.rj.gov.br/oficinas-para-artesaos-parceria-fenig-ibap/" target="_blank" rel="noopener noreferrer">Oficinas para artesãos em parceria com a Fenig<span class="visually-hidden"> (abre em nova aba)</span></a></li>
+                            </ul>
+                            <a class="btn btn--outline" href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-social-e-ambiental/">Conhecer o núcleo</a>
+                        </article>
+
+                        <article class="nucleo-panel" role="tabpanel" id="painel-tic" aria-labelledby="tab-tic" tabindex="0">
+                            <h3 class="nucleo-panel__title">Tecnologia da Informação e da Comunicação</h3>
+                            <p>Desenvolvimento de sistemas e soluções digitais para serviços públicos, com foco em controle, segurança da informação e agilidade no atendimento.</p>
+                            <h4 class="nucleo-panel__subtitle">Projetos relacionados</h4>
+                            <ul class="nucleo-panel__list">
+                                <li><a href="https://ibap-rj.org.br/projetos-em-destaque/prova-eletronica/">Sistema de Aplicação de Prova Eletrônica</a></li>
+                                <li><a href="https://ibap-rj.org.br/projetos-em-destaque/sistema-de-comunicacao-de-vendas/">Sistema de Comunicação de Vendas</a></li>
+                                <li><a href="https://ibap-rj.org.br/projetos-em-destaque/sistema-de-registro-de-contratos/">Sistema de Registro de Contratos</a></li>
+                            </ul>
+                            <a class="btn btn--outline" href="https://ibap-rj.org.br/linhas-de-atuacao/tecnologia-da-informacao-e-da-comunicacao/">Conhecer o núcleo</a>
+                        </article>
+
+                        <article class="nucleo-panel" role="tabpanel" id="painel-seletivos" aria-labelledby="tab-seletivos" tabindex="0">
+                            <h3 class="nucleo-panel__title">Processos Seletivos</h3>
+                            <p>Planejamento e execução de processos seletivos, da definição das etapas à aplicação das avaliações.</p>
+                            <a class="btn btn--outline" href="https://ibap-rj.org.br/linhas-de-atuacao/processos-seletivos/">Conhecer o núcleo</a>
+                        </article>
+
+                        <article class="nucleo-panel" role="tabpanel" id="painel-mobilidade" aria-labelledby="tab-mobilidade" tabindex="0">
+                            <h3 class="nucleo-panel__title">Mobilidade Urbana</h3>
+                            <p>Estudos e projetos de transporte e trânsito, incluindo soluções para os processos de habilitação e de registro de veículos.</p>
+                            <h4 class="nucleo-panel__subtitle">Projetos relacionados</h4>
+                            <ul class="nucleo-panel__list">
+                                <li><a href="https://ibap-rj.org.br/projetos-em-destaque/prova-eletronica/">Sistema de Aplicação de Prova Eletrônica</a></li>
+                                <li><a href="https://ibap-rj.org.br/projetos-em-destaque/sistema-de-registro-de-contratos/">Sistema de Registro de Contratos</a></li>
+                            </ul>
+                            <a class="btn btn--outline" href="https://ibap-rj.org.br/linhas-de-atuacao/mobilidade-urbana/">Conhecer o núcleo</a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Projetos em destaque ===== -->
+        <section class="section" id="projetos" aria-labelledby="projetos-titulo">
+            <div class="container">
+                <div class="section-head section-head--row">
+                    <div>
+                        <h2 id="projetos-titulo">Projetos em destaque</h2>
+                        <p>Soluções desenvolvidas com órgãos públicos e parceiros institucionais.</p>
+                    </div>
+                </div>
+
+                <div class="carousel carousel--projects" data-carousel>
+                    <ul class="carousel__track" data-carousel-track aria-label="Lista de projetos">
+                        <li>
+                            <article class="project-card">
+                                <img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/banner-home-pequenos-detran-300x225-1.jpg" alt="" width="300" height="225" loading="lazy">
+                                <div class="project-card__body">
+                                    <h3 class="project-card__title"><a href="https://ibap-rj.org.br/projetos-em-destaque/prova-eletronica/">Sistema de Aplicação de Prova Eletrônica</a></h3>
+                                    <p>Avaliação teórica dos candidatos à CNH, apoiando a análise do processo de ensino e a verificação da aptidão para conduzir veículos.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="project-card">
+                                <img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/banner-home-pequenos-poupatempo-300x225-1.jpg" alt="" width="300" height="225" loading="lazy">
+                                <div class="project-card__body">
+                                    <h3 class="project-card__title"><a href="https://ibap-rj.org.br/projetos-em-destaque/central-de-atendimento-ao-cidadao/">Centrais de Atendimento</a></h3>
+                                    <p>Reúnem, em um único espaço, órgãos públicos, entidades da sociedade civil e empresas que prestam serviços ao cidadão.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="project-card">
+                                <img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/banner-home-pequenos-fibraotica-300x225-1.jpg" alt="" width="300" height="225" loading="lazy">
+                                <div class="project-card__body">
+                                    <h3 class="project-card__title"><a href="https://ibap-rj.org.br/projetos-em-destaque/sistema-de-comunicacao-de-vendas/">Sistema de Comunicação de Vendas</a></h3>
+                                    <p>Conecta os cartórios de notas ao Detran para consulta da situação do veículo no momento da negociação.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="project-card">
+                                <img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/banner-home-pequenos-contratos-300x225-1.jpg" alt="" width="300" height="225" loading="lazy">
+                                <div class="project-card__body">
+                                    <h3 class="project-card__title"><a href="https://ibap-rj.org.br/projetos-em-destaque/sistema-de-registro-de-contratos/">Sistema de Registro de Contratos</a></h3>
+                                    <p>Sistema web para o registro de contratos de financiamento de veículos pelas financeiras, com acompanhamento em tempo real.</p>
+                                </div>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="project-card">
+                                <img src="https://ibap-rj.org.br/wp-content/uploads/2024/07/oficina-fenig.jpg" alt="" width="300" height="225" loading="lazy">
+                                <div class="project-card__body">
+                                    <h3 class="project-card__title"><a href="https://fenig.novaiguacu.rj.gov.br/oficinas-para-artesaos-parceria-fenig-ibap/" target="_blank" rel="noopener noreferrer">Oficinas para artesãos com a Fenig<span class="visually-hidden"> (abre em nova aba)</span></a></h3>
+                                    <p>Parceria com a Fundação Educacional e Cultural de Nova Iguaçu oferece oficinas gratuitas de qualificação para artesãos do programa municipal.</p>
+                                </div>
+                            </article>
+                        </li>
+                    </ul>
+                    <div class="carousel__controls carousel__controls--end">
+                        <div class="carousel__arrows">
+                            <button type="button" class="carousel__btn carousel__btn--dark" data-carousel-prev aria-label="Projetos anteriores">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7"/></svg>
+                            </button>
+                            <button type="button" class="carousel__btn carousel__btn--dark" data-carousel-next aria-label="Próximos projetos">
+                                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 5l7 7-7 7"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Boletim IBAP-RJ ===== -->
+        <!-- Atualização manual: cada notícia é um bloco <article>. Mantenha títulos, datas e links iguais aos publicados. -->
+        <section class="section section--surface" id="boletim" aria-labelledby="boletim-titulo">
+            <div class="container">
+                <div class="section-head">
+                    <h2 id="boletim-titulo">Boletim IBAP-RJ</h2>
+                    <p>Criado pelo Núcleo de Estudos em Desenvolvimento e Governança, o boletim é um espaço aberto à troca de conhecimento e à divulgação de conteúdos de interesse da administração pública.</p>
+                </div>
+
+                <div class="boletim__grid reveal">
+                    <article class="news-featured">
+                        <img class="news-featured__image" src="https://ibap-rj.org.br/wp-content/uploads/2026/06/boletins-site-177.png" alt="" width="1200" height="675" loading="lazy">
+                        <!-- Imagem: acervo do próprio IBAP-RJ (site institucional) -->
+                        <div class="news-meta">
+                            <span class="news-meta__category">Artigo recomendado</span>
+                            <time datetime="2026-06-15">15 jun. 2026</time>
+                        </div>
+                        <h3 class="news-featured__title"><a href="https://ibap-rj.org.br/2026/06/15/a-construcao-do-protagonismo-judicial-brasileiro-da-ditadura-a-democracia/">A construção do protagonismo judicial brasileiro da ditadura à democracia</a></h3>
+                        <p>Maria Pia Guerra e Roberto Dalledone Machado Filho analisam como os próprios magistrados atuaram nas reformas do Judiciário entre 1965 e 1988.</p>
+                    </article>
+
+                    <ul class="news-list">
+                        <li>
+                            <article class="news-item">
+                                <time datetime="2026-06-15">15 jun. 2026</time>
+                                <h3 class="news-item__title"><a href="https://ibap-rj.org.br/2026/06/15/tensoes-e-continuidades-nos-modelos-de-analise-sobre-militares-e-politica-no-brasil/">Tensões e continuidades nos modelos de análise sobre militares e política no Brasil</a></h3>
+                                <p>Guilherme Lemos de Souza e Piero C. Leirner revisam as interpretações da ciência política que aproximam as Forças Armadas de um partido.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="news-item">
+                                <time datetime="2026-06-15">15 jun. 2026</time>
+                                <h3 class="news-item__title"><a href="https://ibap-rj.org.br/2026/06/15/o-que-e-o-bolsonarismo/">O que é o bolsonarismo?</a></h3>
+                                <p>João Feres Júnior e Carolina Almeida de Paula discutem o fenômeno a partir de uma pesquisa qualitativa nacional com eleitores.</p>
+                            </article>
+                        </li>
+                        <li>
+                            <article class="news-item">
+                                <time datetime="2026-06-15">15 jun. 2026</time>
+                                <h3 class="news-item__title"><a href="https://ibap-rj.org.br/2026/06/15/crime-negocio-e-poder-na-periferia-de-sao-paulo/">Crime, negócio e poder na periferia de São Paulo</a></h3>
+                                <p>Gustavo Prieto e Giovanna Milano examinam as disputas por mercado e poder no cotidiano de uma periferia urbana.</p>
+                            </article>
+                        </li>
+                    </ul>
+                </div>
+
+                <a class="btn btn--outline boletim__more" href="https://ibap-rj.org.br/boletim-ibap-rj/">Ver todas as edições</a>
+            </div>
+        </section>
+
+        <!-- ===== Oportunidades ===== -->
+        <section class="section section--dark" id="oportunidades" aria-labelledby="oportunidades-titulo">
+            <div class="container jobs">
+                <div class="jobs__intro">
+                    <h2 id="oportunidades-titulo">Trabalhe no IBAP-RJ</h2>
+                    <p>Estamos com vagas abertas. Cadastre seu currículo no portal Trabalhe Conosco.</p>
+                    <a class="btn btn--light" href="https://trabalheconosco.ibap-rj.org.br">Acessar o Trabalhe Conosco</a>
+                </div>
+                <ul class="jobs__list">
+                    <li class="job">
+                        <h3 class="job__title">Vagas para monitor</h3>
+                        <p>Para professores que queiram atuar no projeto Empreenda Já, que capacita jovens em empreendedorismo e trabalhabilidade.</p>
+                        <a class="text-link text-link--light" href="https://empreendaja.ibap-rj.org.br/">Conhecer o Empreenda Já</a>
+                    </li>
+                    <li class="job">
+                        <h3 class="job__title">Vagas para pessoas com deficiência</h3>
+                        <p>Contratação para início imediato. Faça seu cadastro no portal Trabalhe Conosco.</p>
+                        <a class="text-link text-link--light" href="https://trabalheconosco.ibap-rj.org.br">Fazer cadastro</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== Clientes e parceiros ===== -->
+        <!-- Logos do acervo do IBAP-RJ. Para produção, copie os arquivos para images/logos/ e troque os caminhos. -->
+        <section class="section" id="parceiros" aria-labelledby="parceiros-titulo">
+            <div class="container">
+                <div class="section-head section-head--row">
+                    <div>
+                        <h2 id="parceiros-titulo">Clientes e parceiros</h2>
+                        <p>Parcerias com organizações públicas e privadas para o aperfeiçoamento da gestão pública.</p>
+                    </div>
+                    <button type="button" class="btn btn--outline btn--small" data-marquee-toggle hidden>Pausar animação</button>
+                </div>
+
+                <h3 class="logos__label">Clientes</h3>
+                <div class="logo-marquee" data-marquee>
+                    <ul class="logo-marquee__list">
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/niteroi.png" alt="Prefeitura de Niterói" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/alerj.png" alt="Alerj" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/gov-esperito-santo.png" alt="Governo do Espírito Santo" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/eletrobras.png" alt="Eletrobras" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/inb.png" alt="INB – Indústrias Nucleares do Brasil" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/detran.png" alt="Detran" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/fiocruz.png" alt="Fiocruz" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/ufrj.png" alt="UFRJ" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/transpetro.png" alt="Transpetro" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/senac.png" alt="Senac" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/furnas.png" alt="Furnas" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/funasa.png" alt="Funasa" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/proderj.png" alt="Proderj" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/jucerja.png" alt="Jucerja" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/inmetro.png" alt="Inmetro" loading="lazy"></li>
+                    </ul>
+                </div>
+
+                <h3 class="logos__label">Parcerias institucionais</h3>
+                <div class="logo-marquee logo-marquee--reverse" data-marquee>
+                    <ul class="logo-marquee__list">
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/onu-logo-ibap.png" alt="ONU" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/hervard.png" alt="Universidade Harvard" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/enap.png" alt="Enap" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/fgv-ebape.png" alt="FGV EBAPE" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/canada-public-service.png" alt="Serviço Público do Canadá" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/governo-espanha.png" alt="Governo da Espanha" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/universidad-chile.png" alt="Universidad de Chile" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/clad.png" alt="CLAD" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/joao-pinheiro.png" alt="Fundação João Pinheiro" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/joaquim-nabuco.png" alt="Fundação Joaquim Nabuco" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/ceperj.png" alt="Ceperj" loading="lazy"></li>
+                        <li><img src="https://ibap-rj.org.br/wp-content/uploads/2023/09/fundap.png" alt="Fundap" loading="lazy"></li>
+                    </ul>
+                </div>
+
+                <div class="logos__links">
+                    <a class="text-link" href="https://ibap-rj.org.br/clientes/">Todos os clientes</a>
+                    <a class="text-link" href="https://ibap-rj.org.br/parcerias-institucionais/">Todas as parcerias</a>
+                    <a class="text-link" href="https://ibap-rj.org.br/sobre-o-ibap-rj/protocolos-de-intencoes/">Protocolos de intenções</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Contato ===== -->
+        <section class="section section--surface" id="contato" aria-labelledby="contato-titulo">
+            <div class="container contact">
+                <div class="contact__info">
+                    <h2 id="contato-titulo">Fale conosco</h2>
+                    <p>Entre em contato pelos nossos canais de atendimento.</p>
+                    <dl class="contact__list">
+                        <div>
+                            <dt>Endereço</dt>
+                            <dd>Rua Buenos Aires, 68, 31º andar<br>Rio de Janeiro – RJ, CEP 20070-900</dd>
+                        </div>
+                        <div>
+                            <dt>Telefone</dt>
+                            <dd><a href="tel:+552138061000">(21) 3806-1000</a></dd>
+                        </div>
+                        <div>
+                            <dt>E-mail</dt>
+                            <dd><a href="mailto:ibap-rj@ibap-rj.org.br">ibap-rj@ibap-rj.org.br</a></dd>
+                        </div>
+                        <div>
+                            <dt>Canal de denúncias</dt>
+                            <dd><a href="mailto:denuncias@ibap-rj.org.br">denuncias@ibap-rj.org.br</a></dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <div class="contact__card">
+                    <h3>Envie uma mensagem</h3>
+                    <p>Use nosso formulário para dúvidas, propostas de parceria ou para receber a newsletter do instituto.</p>
+                    <a class="btn btn--primary" href="https://ibap-rj.org.br/contato/">Abrir formulário de contato</a>
+                    <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+Buenos+Aires+68+Rio+de+Janeiro" target="_blank" rel="noopener noreferrer">Ver endereço no mapa<span class="visually-hidden"> (abre em nova aba)</span></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Rodapé ===== -->
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <p class="site-footer__name">IBAP-RJ</p>
+                <p>Instituto Brasileiro de Administração Pública e Apoio Universitário do Rio de Janeiro. Sociedade civil sem fins lucrativos desde 2002.</p>
+            </div>
+
+            <nav aria-labelledby="rodape-instituto">
+                <h2 class="site-footer__title" id="rodape-instituto">Instituto</h2>
+                <ul>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/quem-somos/">Quem somos</a></li>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/organizacao-social/">Organização Social</a></li>
+                    <li><a href="https://ibap-rj.org.br/historico/">Histórico</a></li>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/responsabilidade-socioambiental/">Responsabilidade socioambiental</a></li>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/certificacoes/">Certificações</a></li>
+                    <li><a href="https://ibap-rj.org.br/sobre-o-ibap-rj/galeria-de-fotos/">Galeria de fotos</a></li>
+                    <li><a href="https://ibap-rj.org.br/fique-por-dentro/">Fique por dentro</a></li>
+                </ul>
+            </nav>
+
+            <nav aria-labelledby="rodape-atuacao">
+                <h2 class="site-footer__title" id="rodape-atuacao">Pesquisa e consultoria</h2>
+                <ul>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/atendimento-ao-cidadao/">Atendimento ao cidadão</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-integrada-para-resultados/">Gestão para resultados</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/desenvolvimento-e-governanca/">Desenvolvimento e governança</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-de-pessoas/">Gestão de pessoas</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/gestao-social-e-ambiental/">Gestão social e ambiental</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/tecnologia-da-informacao-e-da-comunicacao/">Tecnologia da informação</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/processos-seletivos/">Processos seletivos</a></li>
+                    <li><a href="https://ibap-rj.org.br/linhas-de-atuacao/mobilidade-urbana/">Mobilidade urbana</a></li>
+                </ul>
+            </nav>
+
+            <nav aria-labelledby="rodape-transparencia">
+                <h2 class="site-footer__title" id="rodape-transparencia">Transparência</h2>
+                <ul>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/ibap-rj/">Compliance</a></li>
+                    <li><a href="https://ibap-rj.org.br/projetos-com-poder-publico/">Projetos com o poder público</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/regulamento-interno/">Regulamentos internos</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/editais/">Editais</a></li>
+                    <li><a href="https://ibap-rj.org.br/categoria-transparencia/relatorio-de-transparencia-salarial/">Relatório de transparência salarial</a></li>
+                </ul>
+            </nav>
+
+            <nav aria-labelledby="rodape-restrita">
+                <h2 class="site-footer__title" id="rodape-restrita">Área restrita</h2>
+                <ul>
+                    <li><a href="http://200.146.211.21/IBAPCC/">Contracheque</a></li>
+                    <li><a href="https://ibap-rj.org.br/ponto-ibap/">Ponto IBAP</a></li>
+                    <li><a href="https://trabalheconosco.ibap-rj.org.br">Trabalhe conosco</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container site-footer__bottom">
+            <p>© <span data-year>2026</span> IBAP-RJ. Todos os direitos reservados.</p>
+            <p>Rua Buenos Aires, 68, 31º andar, Rio de Janeiro – RJ</p>
+        </div>
+    </footer>
+
+    <a class="back-to-top" href="#inicio" aria-label="Voltar ao topo">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 15l7-7 7 7"/></svg>
+    </a>
+</body>
+</html>

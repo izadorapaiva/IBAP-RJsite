@@ -1,0 +1,7 @@
+Pasta para as imagens do site.
+
+Nesta versão, logos, banners e fotos apontam para o acervo atual em
+https://ibap-rj.org.br/wp-content/uploads/... para funcionar imediatamente.
+Antes de publicar de forma independente do WordPress, baixe os arquivos
+para esta pasta (por exemplo images/logos/ e images/projetos/), converta
+para WebP quando possível e troque os caminhos no index.html.

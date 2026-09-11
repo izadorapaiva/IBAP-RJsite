@@ -1,0 +1,38 @@
+# Dependências
+node_modules/
+npm-debug.log
+package-lock.json
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Ambiente
+.env
+.env.local
+
+# Build/dist
+dist/
+build/
+.cache/
+
+# Sistema operacional
+Thumbs.db
+.DS_Store
+
+# Backups
+*.bak
+*.backup
+*~
+
+# Logs
+*.log
+
+# Screenshots/testes
+*.png
+*.jpg
+test_*.py

@@ -534,7 +534,7 @@ section[id] {
     --focus: #9cc7ff;
     position: relative;
     overflow: hidden;
-    padding-block: clamp(3.5rem, 8vw, 6rem) clamp(6.5rem, 11vw, 9rem);
+    padding-block: clamp(3.5rem, 2vw, 3rem) clamp(6.5rem, 3vw, 2rem);
     background: var(--azul-900);
     color: var(--white);
     isolation: isolate;
@@ -590,9 +590,9 @@ section[id] {
     max-width: 15ch;
     margin-bottom: 1.5rem;
     color: var(--white);
-    font-size: clamp(2.25rem, 1.35rem + 3.8vw, 4.1rem);
-    font-weight: 700;
-    line-height: 1.05;
+    font-size: clamp(2.5rem, 3.2rem, 6rem);
+    font-weight: 900;
+    line-height: 1.01;
     letter-spacing: -0.02em;
 }
 
@@ -610,7 +610,7 @@ section[id] {
 }
 
 .hero__featured {
-    width: min(100%, 440px);
+    width: min(100%, 375px);
     justify-self: center;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.06);

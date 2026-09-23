@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quem Somos | IBAP-RJ</title>
+    <meta name="description" content="Conheça o Instituto Brasileiro de Administração Pública e Apoio Universitário do Rio de Janeiro. Missão, visão, valores e história da instituição.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+
+    <script>document.documentElement.classList.add('js');</script>
+
+    <style>
+        :root {
+            --azul-950: #0a1d33;
+            --azul-900: #0e2a47;
+            --azul-700: #1d4e7e;
+            --azul-100: #e8f0f8;
+            --verde-600: #17785a;
+            --verde-100: #e8f3f0;
+            --ink: #1a1a1a;
+            --muted: #666;
+            --line: #ddd;
+            --surface: #f9f9f9;
+            --white: #fff;
+            --focus: #0066cc;
+
+            --font-sans: 'Public Sans', system-ui, sans-serif;
+            --font-serif: 'Source Serif 4', Georgia, serif;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+            --radius-sm: 6px;
+            --radius: 12px;
+            --radius-lg: 16px;
+            --container: 1200px;
+            --header-height: 76px;
+            --duration: 300ms;
+            --duration-long: 600ms;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            line-height: 1.6;
+            color: var(--ink);
+            background: var(--white);
+        }
+
+        a {
+            color: var(--azul-700);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-serif);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .container {
+            max-width: var(--container);
+            margin-inline: auto;
+            padding-inline: clamp(1rem, 4vw, 2rem);
+        }
+
+        /* ========== UTILITY BAR ========== */
+        .utility-bar {
+            background: var(--azul-950);
+            color: var(--white);
+            padding-block: 0.75rem;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--azul-900);
+        }
+
+        .utility-bar__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .utility-bar__phone {
+            margin: 0;
+        }
+
+        .utility-bar__phone a {
+            color: var(--white);
+        }
+
+        .utility-bar__links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .utility-bar__links a {
+            color: rgba(255, 255, 255, 0.9);
+            transition: color var(--duration) ease;
+        }
+
+        .utility-bar__links a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 700px) {
+            .utility-bar__inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .utility-bar__links {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ========== HEADER ========== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            height: var(--header-height);
+        }
+
+        .site-header.sticky {
+            box-shadow: var(--shadow);
+        }
+
+        .site-header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+            height: 100%;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .brand__logo {
+            height: 50px;
+            width: auto;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .menu-toggle__bar {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--azul-900);
+            transition: all var(--duration) ease;
+        }
+
+        .menu-toggle[aria-expanded="true"] .menu-toggle__bar:nth-child(1) {
+            transform: rotate(45deg) translateY(12px);
+        }
+
+        .menu-toggle[aria-expanded="true"] .menu-toggle__bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle[aria-expanded="true"] .menu-toggle__bar:nth-child(3) {
+            transform: rotate(-45deg) translateY(-10px);
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-left: auto;
+        }
+
+        .main-nav__list {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+
+        .main-nav__link {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--azul-700);
+            font-weight: 500;
+            transition: color var(--duration) ease;
+        }
+
+        .main-nav__link:hover {
+            color: var(--verde-600);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: var(--verde-600);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all var(--duration) ease;
+        }
+
+        .btn:hover {
+            background: var(--verde-600);
+            opacity: 0.9;
+        }
+
+        .btn--outline {
+            background: transparent;
+            border: 1px solid var(--azul-700);
+            color: var(--azul-700);
+        }
+
+        .btn--outline:hover {
+            background: var(--azul-100);
+            border-color: var(--azul-900);
+        }
+
+        @media (max-width: 900px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                background: var(--white);
+                border-bottom: 1px solid var(--line);
+                padding: 1.5rem;
+                gap: 0;
+            }
+
+            .main-nav.open {
+                display: flex;
+            }
+
+            .main-nav__list {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .main-nav__link {
+                padding: 0.75rem 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .main-nav__cta {
+                align-self: flex-start;
+                margin-top: 1rem;
+            }
+        }
+
+        .header-sentinel {
+            display: none;
+        }
+
+        /* ========== BREADCRUMB ========== */
+        .breadcrumb {
+            padding-block: 1rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .breadcrumb a {
+            color: var(--azul-700);
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* ========== PAGE HEADER ========== */
+        .page-header {
+            padding-block: clamp(2.5rem, 5vw, 4rem);
+            background: var(--azul-900);
+            color: var(--white);
+        }
+
+        .page-header h1 {
+            color: var(--white);
+            font-size: clamp(2rem, 1.5rem + 2vw, 3rem);
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            max-width: 60ch;
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1.075rem;
+        }
+
+        /* ========== PAGE LAYOUT ========== */
+        .page-layout {
+            display: grid;
+            gap: 2.5rem;
+            margin-top: -2.5rem;
+        }
+
+        @media (min-width: 1000px) {
+            .page-layout {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+                gap: 3.5rem;
+                align-items: start;
+            }
+        }
+
+        .page-content {
+            display: grid;
+            gap: 3rem;
+        }
+
+        .content-block {
+            padding: clamp(1.75rem, 4vw, 2.5rem);
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            animation: reveal-up var(--duration-long) ease-out;
+        }
+
+        @keyframes reveal-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .content-block h2 {
+            font-size: clamp(1.5rem, 1.2rem + 1vw, 1.9rem);
+            margin-bottom: 1rem;
+        }
+
+        .content-block > p {
+            max-width: 70ch;
+            color: var(--muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .content-block > p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        /* ========== VALUES GRID ========== */
+        .values-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 700px) {
+            .values-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        .value-card {
+            padding: 1.35rem;
+            background: var(--azul-100);
+            border-left: 3px solid var(--verde-600);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(29, 78, 126, 0.1);
+        }
+
+        .value-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--azul-900);
+            font-size: 1.05rem;
+        }
+
+        .value-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .divider {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .divider h3 {
+            color: var(--verde-600);
+            margin-bottom: 0.5rem;
+        }
+
+        .divider.large h3 {
+            color: var(--azul-900);
+        }
+
+        .divider p {
+            color: var(--ink);
+            font-weight: 500;
+        }
+
+        /* ========== SIDEBAR ========== */
+        .sidebar {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .sidebar-box {
+            padding: 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+        }
+
+        .sidebar-box h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: var(--azul-900);
+        }
+
+        .sidebar-box ul {
+            display: grid;
+            gap: 0;
+        }
+
+        .sidebar-box li {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .sidebar-box li:last-child {
+            border-bottom: none;
+        }
+
+        .sidebar-box a {
+            display: block;
+            padding: 0.75rem 0;
+            color: var(--azul-700);
+            font-size: 0.95rem;
+            transition: color var(--duration) ease;
+        }
+
+        .sidebar-box a:hover {
+            color: var(--verde-600);
+        }
+
+        .sidebar-box p {
+            margin: 1rem 0 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .sidebar-box p:first-of-type {
+            margin: 0;
+        }
+
+        /* ========== DOCUMENT LINKS ========== */
+        .document-links {
+            display: grid;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .document-link {
+            display: flex;
+            gap: 0.75rem;
+            align-items: baseline;
+            padding: 0.75rem;
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            color: var(--azul-700);
+            font-weight: 500;
+            transition: all var(--duration) ease;
+        }
+
+        .document-link:hover {
+            background: var(--azul-100);
+            border-color: var(--azul-700);
+            transform: translateX(4px);
+        }
+
+        .document-link::before {
+            content: "📄";
+            flex-shrink: 0;
+            font-size: 1.2em;
+        }
+
+        /* ========== CALL-TO-ACTION ========== */
+        .call-to-action {
+            padding: clamp(2rem, 4vw, 3rem);
+            background: var(--verde-100);
+            border-left: 4px solid var(--verde-600);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            animation: reveal-up var(--duration-long) 0.2s ease-out;
+        }
+
+        .call-to-action h3 {
+            color: var(--azul-900);
+            margin-bottom: 0.75rem;
+            font-size: 1.35rem;
+        }
+
+        .call-to-action p {
+            color: var(--muted);
+            margin-bottom: 1.5rem;
+            max-width: 60ch;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        /* ========== FOOTER ========== */
+        .site-footer {
+            background: var(--azul-950);
+            color: var(--white);
+            padding-top: 3rem;
+            padding-bottom: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .site-footer__grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .site-footer__brand {
+            grid-column: 1;
+        }
+
+        .site-footer__name {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .site-footer__brand p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .site-footer__title {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .site-footer nav ul {
+            list-style: none;
+            display: grid;
+            gap: 0.5rem;
+        }
+
+        .site-footer a {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            transition: color var(--duration) ease;
+        }
+
+        .site-footer a:hover {
+            color: var(--white);
+        }
+
+        .site-footer__bottom {
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .site-footer__bottom p {
+            margin: 0.25rem 0;
+        }
+
+        /* ========== RESPONSIVIDADE ========== */
+        @media (max-width: 999px) {
+            .page-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 599px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .content-block {
+                padding: 1.35rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de acesso rápido -->
+    <div class="utility-bar">
+        <div class="container utility-bar__inner">
+            <p class="utility-bar__phone">Atendimento: <a href="tel:+552138061000">(21) 3806-1000</a></p>
+            <nav aria-label="Acesso rápido">
+                <ul class="utility-bar__links">
+                    <li><a href="#">Transparência</a></li>
+                    <li><a href="#">Editais</a></li>
+                    <li><a href="#">Contracheque</a></li>
+                    <li><a href="#">Ponto IBAP</a></li>
+                    <li><a href="#">Canal de denúncias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Cabeçalho -->
+    <header class="site-header">
+        <div class="container site-header__inner">
+            <a class="brand" href="#">
+                <svg width="120" height="50" viewBox="0 0 120 50" style="display: block;">
+                    <rect x="10" y="10" width="100" height="30" fill="none" stroke="#0e2a47" stroke-width="2"/>
+                    <text x="60" y="32" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="#0e2a47">IBAP-RJ</text>
+                </svg>
+            </a>
+
+            <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu">
+                <span class="menu-toggle__bar" aria-hidden="true"></span>
+                <span class="menu-toggle__bar" aria-hidden="true"></span>
+                <span class="menu-toggle__bar" aria-hidden="true"></span>
+            </button>
+
+            <nav class="main-nav" id="main-nav" aria-label="Principal">
+                <ul class="main-nav__list">
+                    <li><a class="main-nav__link" href="#">Home</a></li>
+                    <li><a class="main-nav__link" href="#">Atuação</a></li>
+                    <li><a class="main-nav__link" href="#">Projetos</a></li>
+                    <li><a class="main-nav__link" href="#">Boletim</a></li>
+                    <li><a class="main-nav__link" href="#">Clientes</a></li>
+                    <li><a class="main-nav__link" href="#">Contato</a></li>
+                </ul>
+                <a class="btn main-nav__cta" href="#">Trabalhe conosco</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="container breadcrumb" aria-label="Caminho da página">
+        <a href="#">Home</a> / 
+        <a href="#">Sobre o IBAP-RJ</a> / 
+        <strong>Quem Somos</strong>
+    </nav>
+
+    <!-- Hero da página -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Quem Somos</h1>
+            <p>Conheça a história, missão e valores que guiam o IBAP-RJ há mais de duas décadas no fortalecimento da administração pública brasileira.</p>
+        </div>
+    </section>
+
+    <!-- Conteúdo principal -->
+    <main id="conteudo">
+        <div class="container page-layout">
+            <article class="page-content">
+                <!-- O Instituto -->
+                <section class="content-block">
+                    <h2>O Instituto</h2>
+                    <p>O Instituto Brasileiro de Administração Pública e Apoio Universitário do Rio de Janeiro (IBAP-RJ), criado em 2002, é uma sociedade civil, sem fins lucrativos, de caráter educativo, científico e cultural.</p>
+                    <p>Tem por finalidade criar, aplicar e compartilhar o conhecimento em gestão de forma a promover o desenvolvimento sustentável, a governança pública e o aperfeiçoamento institucional das organizações.</p>
+                    <p>O principal objetivo é dotar as organizações do Estado, do Mercado e da Sociedade dos meios indispensáveis para o seu crescimento e modernização, segundo os princípios e objetivos fixados na Agenda 2030, da Organização das Nações Unidas.</p>
+                </section>
+
+                <!-- Missão, Visão e Valores -->
+                <section class="content-block">
+                    <h2>Missão, Visão e Valores</h2>
+                    
+                    <div class="divider">
+                        <h3>Missão</h3>
+                        <p>Contribuir para o desenvolvimento de nossos clientes oferecendo serviços de qualidade, soluções inovadoras e resultados efetivos, trabalhando sempre com ética e responsabilidade socioambiental.</p>
+                    </div>
+
+                    <div class="divider">
+                        <h3>Visão</h3>
+                        <p>Ser uma referência no seu ramo de atuação, reconhecido por seu comprometimento com a melhoria contínua da qualidade de seus trabalhos e por proporcionar aos clientes e parceiros soluções integradas resultantes de um modelo inovador.</p>
+                    </div>
+
+                    <div class="divider large">
+                        <h3>Valores</h3>
+                    </div>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <h4>Ética</h4>
+                            <p>Acreditamos que só se alcança o sucesso atuando de forma honesta, transparente e responsável com clientes e parceiros.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Qualidade</h4>
+                            <p>Priorizamos a qualidade em nossas atividades, seguindo a prática de melhorias contínuas.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Responsabilidade Social</h4>
+                            <p>Queremos a continuidade e um amanhã melhor para todos, respeitando nossa responsabilidade socioambiental.</p>
+                        </div>
+                        <div class="value-card">
+                            <h4>Inovação</h4>
+                            <p>Buscamos constantemente por métodos, tecnologias e processos novos para oferecer soluções modernas.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Políticas -->
+                <section class="content-block">
+                    <h2>Políticas de Qualidade e Gestão</h2>
+                    
+                    <div class="divider">
+                        <h3>Política de Qualidade</h3>
+                        <p>No escopo de gestão administrativa pública, o IBAP-RJ tangencia a qualidade total para seus clientes, buscando a melhoria contínua de seus colaboradores, serviços e processos através de aprimoramento com valor agregado.</p>
+                    </div>
+
+                    <div class="divider">
+                        <h3>Política de Saúde, Segurança e Meio Ambiente (SMS)</h3>
+                        <p>Assumindo a responsabilidade socioambiental, o IBAP-RJ administra suas atividades de forma a prevenir a poluição e minimizar o uso de recursos naturais não renováveis, atendendo às legislações vigentes.</p>
+                    </div>
+                </section>
+
+                <!-- Documentos -->
+                <section class="content-block">
+                    <h2>Documentos Institucionais</h2>
+                    <p>Acesse os documentos oficiais do IBAP-RJ para conhecer em detalhes sua estrutura jurídica e governança:</p>
+                    <div class="document-links">
+                        <a class="document-link" href="#" target="_blank">Estatuto Social</a>
+                        <a class="document-link" href="#" target="_blank">CNPJ</a>
+                        <a class="document-link" href="#" target="_blank">Ata de Eleição da Diretoria</a>
+                    </div>
+                </section>
+
+                <!-- Call to action -->
+                <section class="call-to-action">
+                    <h3>Quer conhecer melhor o IBAP-RJ?</h3>
+                    <p>Navegue por outras seções para entender como trabalhamos, nossos projetos e linhas de atuação.</p>
+                    <div class="cta-buttons">
+                        <a class="btn btn--outline" href="#">Ver histórico</a>
+                        <a class="btn btn--outline" href="#">Certificações</a>
+                        <a class="btn btn--outline" href="#">Responsabilidade social</a>
+                    </div>
+                </section>
+            </article>
+
+            <!-- Sidebar (só mostra em desktop) -->
+            <aside class="sidebar" aria-label="Menu lateral" style="display: none;">
+                <div class="sidebar-box">
+                    <h3>Sobre o IBAP-RJ</h3>
+                    <ul>
+                        <li><a href="#">Quem Somos</a></li>
+                        <li><a href="#">Organização Social</a></li>
+                        <li><a href="#">Histórico</a></li>
+                        <li><a href="#">Responsabilidade Socioambiental</a></li>
+                        <li><a href="#">Certificações</a></li>
+                        <li><a href="#">Protocolos de Intenções</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Linhas de Atuação</h3>
+                    <ul>
+                        <li><a href="#">Pesquisa e Consultoria</a></li>
+                        <li><a href="#">Atendimento ao Cidadão</a></li>
+                        <li><a href="#">Gestão para Resultados</a></li>
+                        <li><a href="#">Governança</a></li>
+                        <li><a href="#">Gestão de Pessoas</a></li>
+                        <li><a href="#">Gestão Social e Ambiental</a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Contato</h3>
+                    <p><strong>Telefone:</strong><br>
+                        <a href="tel:+552138061000">(21) 3806-1000</a>
+                    </p>
+                    <p><strong>Email:</strong><br>
+                        <a href="mailto:ibap-rj@ibap-rj.org.br">ibap-rj@ibap-rj.org.br</a>
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <p class="site-footer__name">IBAP-RJ</p>
+                <p>Instituto Brasileiro de Administração Pública. Sociedade civil sem fins lucrativos desde 2002.</p>
+            </div>
+
+            <nav>
+                <h2 class="site-footer__title">Instituto</h2>
+                <ul>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Organização Social</a></li>
+                    <li><a href="#">Histórico</a></li>
+                    <li><a href="#">Responsabilidade socioambiental</a></li>
+                    <li><a href="#">Certificações</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 class="site-footer__title">Pesquisa e consultoria</h2>
+                <ul>
+                    <li><a href="#">Atendimento ao cidadão</a></li>
+                    <li><a href="#">Gestão para resultados</a></li>
+                    <li><a href="#">Desenvolvimento e governança</a></li>
+                    <li><a href="#">Gestão de pessoas</a></li>
+                    <li><a href="#">Gestão social e ambiental</a></li>
+                </ul>
+            </nav>
+
+            <nav>
+                <h2 class="site-footer__title">Transparência</h2>
+                <ul>
+                    <li><a href="#">Compliance</a></li>
+                    <li><a href="#">Projetos com o poder público</a></li>
+                    <li><a href="#">Regulamentos internos</a></li>
+                    <li><a href="#">Editais</a></li>
+                    <li><a href="#">Relatório de transparência</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container site-footer__bottom">
+            <p>© 2026 IBAP-RJ. Todos os direitos reservados.</p>
+            <p>Rua Buenos Aires, 68, 31º andar, Rio de Janeiro – RJ</p>
+        </div>
+    </footer>
+
+    <script>
+        // Menu hamburger
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainNav = document.querySelector('.main-nav');
+
+        if (menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+                menuToggle.setAttribute('aria-expanded', !isOpen);
+                mainNav.classList.toggle('open');
+            });
+
+            // Fechar ao clicar em um link
+            mainNav.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    mainNav.classList.remove('open');
+                });
+            });
+
+            // Fechar ao pressionar Esc
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    mainNav.classList.remove('open');
+                }
+            });
+        }
+
+        // Sticky header com sombra
+        const header = document.querySelector('.site-header');
+        const sentinel = document.querySelector('.header-sentinel');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 0) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+        });
+    </script>
+</body>
+</html>
